@@ -13,22 +13,20 @@ import java.util.List;
 @RequestMapping("/customer")
 @CrossOrigin
 public class CustomerController {
-
     @Autowired
     private CustomerRepository customerRepository;
 
-    @PostMapping("/add")
+    @PostMapping("/addCustomer")
     public Customer saveCustomer(@RequestBody Customer customer) {
         return customerRepository.save(customer);
-
     }
 
-    @GetMapping("/getAll")
+    @GetMapping("/getAllCustomer")
     public List<Customer> getAllCustomer() {
         return customerRepository.findAll();
     }
 
-    @GetMapping("/get/{id}")
+    @GetMapping("/getCustomer/{id}")
     public Customer getCustomerById(@PathVariable Long id) {
         return customerRepository.findById(id).get();
     }
