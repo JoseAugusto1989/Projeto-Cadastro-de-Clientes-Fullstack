@@ -29,11 +29,10 @@ public class Product {
     @Column(name = "QTD_ESTOQUE")
     private Integer quantityInStock;
 
+    @Column(name = "QTD_ADICIONADA")
+    private Integer addedAmount;
+
     @Column(name = "FORNECEDOR")
     private String provider;
-
-    public Double gainPerPiece(Double salePrice, Double purchasePrice) {
-        return getSalePrice() - getPurchasePrice();
-    }
 
 }

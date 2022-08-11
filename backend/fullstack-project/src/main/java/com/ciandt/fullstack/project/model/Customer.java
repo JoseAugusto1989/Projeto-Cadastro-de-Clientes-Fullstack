@@ -27,7 +27,7 @@ public class Customer {
     private String address;
 
     @Column(name="CPF_CNPJ")
-    private String CPF_CNPJ;
+    private String cpf;
 
     @Column(name="OCUPACAO")
     private String occupation;
